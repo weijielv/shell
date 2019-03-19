@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/ljlogin/ljlogin.iml" filepath="$PROJECT_DIR$/ljlogin/ljlogin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ljpay/ljpay.iml" filepath="$PROJECT_DIR$/ljpay/ljpay.iml" />
       <module fileurl="file://$PROJECT_DIR$/reslib/reslib.iml" filepath="$PROJECT_DIR$/reslib/reslib.iml" />
       <module fileurl="file://$PROJECT_DIR$/shell.iml" filepath="$PROJECT_DIR$/shell.iml" />
     </modules>

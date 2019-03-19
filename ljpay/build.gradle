@@ -3,14 +3,13 @@ if (isLib.toBoolean()) {
 } else {
     apply plugin: 'com.android.application'
 }
-
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
         if(isLib.toBoolean()){
         }else{
-            applicationId "com.lvweijie.ljlogin"
+            applicationId "com.lvweijie.ljpay"
         }
         javaCompileOptions {
             annotationProcessorOptions {
@@ -23,9 +22,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -41,6 +38,7 @@ android {
             }
         }
     }
+
 
 }
 
