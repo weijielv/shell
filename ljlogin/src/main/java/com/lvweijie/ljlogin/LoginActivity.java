@@ -14,6 +14,8 @@ import java.util.logging.Logger;
 @Route(path = "/login/loginActivity")
 public class LoginActivity extends AppCompatActivity {
 
+    private static final String TAG = "LoginActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,8 +34,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //success
-                String path = LoginActivity.this.getIntent().getStringExtra("path");
+                String path = LoginActivity.this.getIntent().getStringExtra("originpath");
                 ARouter.getInstance().build(path)
+                        .withString("key2","logined")
                         .navigation();
             }
         });

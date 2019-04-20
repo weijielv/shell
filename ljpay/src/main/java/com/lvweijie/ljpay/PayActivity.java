@@ -4,8 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.alibaba.android.arouter.utils.Consts;
 
-@Route(path = "/pay/payActivity")
+@Route(path = "/pay/payActivity",extras = 0)
 public class PayActivity extends AppCompatActivity {
 
     @Override

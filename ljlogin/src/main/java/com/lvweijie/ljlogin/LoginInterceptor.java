@@ -24,9 +24,10 @@ public class LoginInterceptor implements IInterceptor {
 
         //todo
 
-        String path = postcard.getPath();
-        if (path.equals("/pay/payActivity")) {
+        int extra = postcard.getExtra();//need login
+        if (extra== 0) {
             String value1 = postcard.getExtras().getString("key2");
+            String path = postcard.getPath();
             if (!value1.equals("logined")) {
                 // go to login;
                 ARouter.getInstance().build("/login/loginActivity")
@@ -34,7 +35,7 @@ public class LoginInterceptor implements IInterceptor {
                         .withString("originpath",path)
                         .navigation();
                 // 觉得有问题，中断路由流程
-                callback.onInterrupt(new RuntimeException("我觉得有点异常"));
+                callback.onInterrupt(new RuntimeException("还没有登陆哦。"));
                 return;
             }
         }
