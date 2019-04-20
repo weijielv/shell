@@ -28,11 +28,11 @@ import static android.security.keystore.KeyProperties.PURPOSE_ENCRYPT;
  * 生成加密key，保存到KeyStore中。
  */
 
-public class ISymmetricKeyGenertor implements KeyGenertorImp {
+public class ISymmetricKeyGenerater implements KeyGenerateImp {
     KeyStore mStore;
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
-    public void genertorKey(String keystoreAlias) {
+    public void generateKey(String keystoreAlias) {
         //这里使用AES + CBC + PADDING_PKCS7，并且需要用户验证方能取出，这里生成加密content的key
         if (TextUtils.isEmpty(keystoreAlias)){
             keystoreAlias = "j1keyStore";
@@ -54,11 +54,11 @@ public class ISymmetricKeyGenertor implements KeyGenertorImp {
     }
 
     @Override
-    public SecretKey getSecretKey(String keysotreAlias) {
+    public SecretKey getSecretKey(String keystoreAlias) {
         initKeyStore();
         SecretKey key = null;
         try {
-            key = (SecretKey) mStore.getKey(keysotreAlias, null);
+            key = (SecretKey) mStore.getKey(keystoreAlias, null);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -14,7 +14,7 @@ import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Log;
 
-import com.j1.j1finger.utils.LoaclSPUtil;
+import com.j1.j1finger.utils.LocalSPUtil;
 
 import java.io.IOException;
 import java.security.InvalidAlgorithmParameterException;
@@ -35,7 +35,7 @@ import javax.crypto.SecretKeyFactory;
 import static android.content.Context.FINGERPRINT_SERVICE;
 import static android.security.keystore.KeyProperties.PURPOSE_DECRYPT;
 import static android.security.keystore.KeyProperties.PURPOSE_ENCRYPT;
-import static com.j1.j1finger.utils.LoaclSPUtil.IVNAME;
+import static com.j1.j1finger.utils.LocalSPUtil.IV_NAME;
 
 /**
  * Created by weijie lv on 2019/4/12.in j1
@@ -49,7 +49,7 @@ public class FingerManager {
     private String TAG = "FingerManager";
     private FingerAuthenticationCallBack callback;
 
-    LoaclSPUtil loaclSPUtil;
+    LocalSPUtil loaclSPUtil;
 
 
     private FingerManager() {
@@ -107,7 +107,7 @@ public class FingerManager {
             setPurpose(purpose);
             setSecretData(kv);
             FingerprintManager.CryptoObject crypto =
-                    J1CryptoObjectCreator.getInstance(activity).creatCryptoObject(purpose,kv.getKey());
+                    J1CryptoObjectCreator.getInstance(activity).createCryptoObject(purpose,kv.getKey());
 
             manager.authenticate(crypto, mCancellationSignal, 0, mSelfCancelled, null);
         }
@@ -138,7 +138,7 @@ public class FingerManager {
      * @return PURPOSE_ENCRYPT 加密。 or   PURPOSE_DECRYPT 解密
      */
     public int isOpenFingerLogin(String alias){
-        loaclSPUtil  =new LoaclSPUtil(activity);
+        loaclSPUtil  =new LocalSPUtil(activity);
         int purpose = TextUtils.isEmpty(loaclSPUtil.getString(alias))? PURPOSE_ENCRYPT : PURPOSE_DECRYPT;
         return purpose;
     }
@@ -232,7 +232,7 @@ public class FingerManager {
             Log.e(TAG, "se == " + encrypted_bs64);
             Log.e(TAG, "iv_bs64 == " + iv_bs64);
             if (loaclSPUtil.putString(kv.getKey(), encrypted_bs64)
-                    && loaclSPUtil.putString(kv.getKey()+IVNAME, iv_bs64)) {
+                    && loaclSPUtil.putString(kv.getKey()+ IV_NAME, iv_bs64)) {
                 callback.onAuthenticationSucceeded(encrypted_bs64);
             } else {
                 callback.onAuthenticationFail("没有保存成功");

@@ -9,12 +9,12 @@ import android.text.TextUtils;
  * Created by weijie lv on 2019/4/18.in j1
  */
 
-public class LoaclSPUtil {
+public class LocalSPUtil {
     private SharedPreferences mSharedPreference;
     private String fingerSp = "fingerSp";
-    public static final String IVNAME = "iv_bs64";
+    public static final String IV_NAME = "iv_bs64";
 
-    public LoaclSPUtil(Context context) {
+    public LocalSPUtil(Context context) {
         mSharedPreference = context.getSharedPreferences(fingerSp, Context.MODE_PRIVATE);
     }
 
