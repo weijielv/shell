@@ -12,4 +12,6 @@ public interface FingerAuthenticationCallBack {
     void onAuthenticationError(int errorCode, CharSequence errString);
 
     void onAuthenticationHelp(int helpCode, CharSequence helpString);
+
+    void onCancel();
 }

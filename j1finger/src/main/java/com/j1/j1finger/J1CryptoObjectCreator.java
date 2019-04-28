@@ -2,16 +2,24 @@ package com.j1.j1finger;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.hardware.biometrics.BiometricPrompt;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Build;
 import android.security.keystore.KeyProperties;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.util.Base64;
+import android.util.Log;
 
+import com.j1.j1finger.utils.IShaKeyGenerater;
 import com.j1.j1finger.utils.ISymmetricKeyGenerater;
 import com.j1.j1finger.utils.KeyGenerateImp;
 import com.j1.j1finger.utils.LocalSPUtil;
+
+import java.security.Key;
+import java.security.PrivateKey;
+import java.security.PublicKey;
+import java.security.Signature;
 
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
@@ -25,13 +33,15 @@ import static com.j1.j1finger.utils.LocalSPUtil.IV_NAME;
  * 加密和解密 cipher的初始化。
  */
 
-class J1CryptoObjectCreator {
+public class  J1CryptoObjectCreator {
 
     private KeyGenerateImp keyGenerateImp;
     LocalSPUtil localSPUtil;
     public static J1CryptoObjectCreator cryptoObjectCreator = null;
+    private String TAG = "J1CryptoObjectCreator";
 
     private J1CryptoObjectCreator (Context context){
+        //keyGenerateImp = new ISymmetricKeyGenerater();
         keyGenerateImp = new ISymmetricKeyGenerater();
         localSPUtil =new LocalSPUtil(context);
     };
@@ -43,11 +53,31 @@ class J1CryptoObjectCreator {
         return cryptoObjectCreator;
     }
 
+    /**
+     * api 为23到28之间调用
+     * @param purpose
+     * @param keyStoreAlias
+     * @return
+     */
     @TargetApi(Build.VERSION_CODES.M)
-    public FingerprintManager.CryptoObject createCryptoObject(int purpose, String keyStoreAlias) throws Exception {
+    public FingerprintManager.CryptoObject createCryptoObject(int purpose, String keyStoreAlias)  {
         Cipher cipher = initCipher(purpose,keyStoreAlias);
         FingerprintManager.CryptoObject cryptoObject = new FingerprintManager.CryptoObject(cipher);
         return cryptoObject;
+
+    }
+
+    /**
+     *  当api大于28后，生成类型为 BiometricPrompt.CryptoObject
+     * @param purpose
+     * @param keyStoreAlias
+     * @return
+     */
+    @RequiresApi(api = 28)
+    public BiometricPrompt.CryptoObject createBiometricCryptoObject(int purpose, String keyStoreAlias){
+            Cipher cipher = initCipher(purpose,keyStoreAlias);
+            BiometricPrompt.CryptoObject cryptoObject = new BiometricPrompt.CryptoObject(cipher);
+            return cryptoObject;
     }
 
 
@@ -56,9 +86,9 @@ class J1CryptoObjectCreator {
     private Cipher initCipher(int purpose,String keyStoreAlias) {
         Cipher cipher = null;
         try {
-            cipher = Cipher.getInstance(KeyProperties.KEY_ALGORITHM_AES + "/" + KeyProperties.BLOCK_MODE_CBC + "/" + KeyProperties.ENCRYPTION_PADDING_PKCS7);
+            cipher = cipher = Cipher.getInstance(KeyProperties.KEY_ALGORITHM_AES + "/" + KeyProperties.BLOCK_MODE_CBC + "/" + KeyProperties.ENCRYPTION_PADDING_PKCS7);
             if (purpose == PURPOSE_DECRYPT) {
-                SecretKey key = keyGenerateImp.getSecretKey(keyStoreAlias);
+                Key key = keyGenerateImp.getSecretKey(keyStoreAlias);
                 if (key == null) {
                     return null;
                 }
@@ -68,6 +98,10 @@ class J1CryptoObjectCreator {
             } else {
                 keyGenerateImp.generateKey(keyStoreAlias);
                 SecretKey key = keyGenerateImp.getSecretKey(keyStoreAlias);
+                if (key == null){
+                    Log.e(TAG,"key = null");
+                    return null;
+                }
                 cipher.init(Cipher.ENCRYPT_MODE, key);
             }
         }catch (Exception e){
@@ -75,6 +109,4 @@ class J1CryptoObjectCreator {
         }
         return cipher;
     }
-
-
 }

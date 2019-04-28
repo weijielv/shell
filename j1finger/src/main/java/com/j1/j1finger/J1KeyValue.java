@@ -18,7 +18,6 @@ public class J1KeyValue<K ,V> {
 
     public K getKey() {
         return key;
-
     }
 
     public void setKey(K key) {
