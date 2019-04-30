@@ -33,21 +33,24 @@ import static com.j1.j1finger.utils.LocalSPUtil.IV_NAME;
  * 加密和解密 cipher的初始化。
  */
 
-public class  J1CryptoObjectCreator {
+public class J1CryptoObjectCreator {
 
     private KeyGenerateImp keyGenerateImp;
     LocalSPUtil localSPUtil;
     public static J1CryptoObjectCreator cryptoObjectCreator = null;
     private String TAG = "J1CryptoObjectCreator";
 
-    private J1CryptoObjectCreator (Context context){
+    private J1CryptoObjectCreator(Context context) {
         //keyGenerateImp = new ISymmetricKeyGenerater();
         keyGenerateImp = new ISymmetricKeyGenerater();
-        localSPUtil =new LocalSPUtil(context);
-    };
-    public static J1CryptoObjectCreator getInstance(Context context){
+        localSPUtil = new LocalSPUtil(context);
+    }
 
-        if (cryptoObjectCreator == null){
+    ;
+
+    public static J1CryptoObjectCreator getInstance(Context context) {
+
+        if (cryptoObjectCreator == null) {
             cryptoObjectCreator = new J1CryptoObjectCreator(context);
         }
         return cryptoObjectCreator;
@@ -55,56 +58,62 @@ public class  J1CryptoObjectCreator {
 
     /**
      * api 为23到28之间调用
+     *
      * @param purpose
      * @param keyStoreAlias
      * @return
      */
     @TargetApi(Build.VERSION_CODES.M)
-    public FingerprintManager.CryptoObject createCryptoObject(int purpose, String keyStoreAlias)  {
-        Cipher cipher = initCipher(purpose,keyStoreAlias);
+    public FingerprintManager.CryptoObject createCryptoObject(int purpose, String keyStoreAlias) {
+        Cipher cipher = initCipher(purpose, keyStoreAlias);
         FingerprintManager.CryptoObject cryptoObject = new FingerprintManager.CryptoObject(cipher);
         return cryptoObject;
 
     }
 
     /**
-     *  当api大于28后，生成类型为 BiometricPrompt.CryptoObject
+     * 当api大于28后，生成类型为 BiometricPrompt.CryptoObject
+     *
      * @param purpose
      * @param keyStoreAlias
      * @return
      */
     @RequiresApi(api = 28)
-    public BiometricPrompt.CryptoObject createBiometricCryptoObject(int purpose, String keyStoreAlias){
-            Cipher cipher = initCipher(purpose,keyStoreAlias);
-            BiometricPrompt.CryptoObject cryptoObject = new BiometricPrompt.CryptoObject(cipher);
-            return cryptoObject;
+    public BiometricPrompt.CryptoObject createBiometricCryptoObject(int purpose, String keyStoreAlias) {
+        Cipher cipher = initCipher(purpose, keyStoreAlias);
+        BiometricPrompt.CryptoObject cryptoObject = new BiometricPrompt.CryptoObject(cipher);
+        return cryptoObject;
     }
 
 
     @RequiresApi(api = Build.VERSION_CODES.M)
-    @Nullable
-    private Cipher initCipher(int purpose,String keyStoreAlias) {
+    private Cipher initCipher(int purpose, String keyStoreAlias) {
         Cipher cipher = null;
         try {
-            cipher = cipher = Cipher.getInstance(KeyProperties.KEY_ALGORITHM_AES + "/" + KeyProperties.BLOCK_MODE_CBC + "/" + KeyProperties.ENCRYPTION_PADDING_PKCS7);
-            if (purpose == PURPOSE_DECRYPT) {
+            //加密算法。
+            cipher = Cipher.getInstance(KeyProperties.KEY_ALGORITHM_AES + "/" + KeyProperties.BLOCK_MODE_CBC + "/" + KeyProperties.ENCRYPTION_PADDING_PKCS7);
+            if (purpose == PURPOSE_DECRYPT) {//解密
                 Key key = keyGenerateImp.getSecretKey(keyStoreAlias);
                 if (key == null) {
                     return null;
                 }
+                //通过密钥加密的数据，保存在文件中，现在拿出来，解密出来
                 String iv = localSPUtil.getString(keyStoreAlias + IV_NAME);
                 byte[] mIV = Base64.decode(iv, Base64.URL_SAFE);
+                //初始化解密cipher
                 cipher.init(Cipher.DECRYPT_MODE, key, new IvParameterSpec(mIV));
-            } else {
+            } else {//加密
+                //通过KeyStore生成密钥。
                 keyGenerateImp.generateKey(keyStoreAlias);
-                SecretKey key = keyGenerateImp.getSecretKey(keyStoreAlias);
-                if (key == null){
-                    Log.e(TAG,"key = null");
+                //拿到key用于初始化 cipher。
+                Key key = keyGenerateImp.getSecretKey(keyStoreAlias);
+                if (key == null) {
                     return null;
                 }
+                //使用密钥初始化加密cipher。
                 cipher.init(Cipher.ENCRYPT_MODE, key);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return cipher;

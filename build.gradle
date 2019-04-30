@@ -17,7 +17,7 @@ buildscript {
 
 //针对不同的app module之间的差异不统一，也不可控
 ext {
-    compileSdkVersion = 26
+    compileSdkVersion = 28
     buildToolsVersion = "27.0.3"
     minSdkVersion = 14
     targetSdkVersion = 26

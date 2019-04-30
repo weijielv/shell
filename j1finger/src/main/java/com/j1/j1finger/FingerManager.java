@@ -193,9 +193,6 @@ public class FingerManager {
         mCancellationSignal.setOnCancelListener(new CancellationSignal.OnCancelListener() {
             @Override
             public void onCancel() {
-                //handle cancel result
-                Log.i(TAG, "Canceled");
-
                 callback.onCancel();
             }
         });
@@ -203,14 +200,12 @@ public class FingerManager {
             @Override
             public void onAuthenticationError(int errorCode, CharSequence errString) {
                 super.onAuthenticationError(errorCode, errString);
-
                 callback.onAuthenticationError(errorCode, errString);
             }
 
             @Override
             public void onAuthenticationSucceeded(BiometricPrompt.AuthenticationResult result) {
                 super.onAuthenticationSucceeded(result);
-
                 //去除cipher 加密或者解密
                 if (result.getCryptoObject() == null) {
                     callback.onAuthenticationFail("没有加密方");
@@ -232,8 +227,6 @@ public class FingerManager {
                 callback.onAuthenticationFail("");
             }
         };
-
-
         BiometricPrompt.CryptoObject cryptoObject = J1CryptoObjectCreator.getInstance(activity).createBiometricCryptoObject(purpose, kv.getKey());
         mBiometricPrompt.authenticate(cryptoObject, mCancellationSignal, activity.getMainExecutor(), mAuthenticationCallback);
     }
