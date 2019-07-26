@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/download_apk_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/alpha_40_black">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="@dimen/dimen_540px"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true">
+
+            <View
+                android:id="@+id/view_center_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:layout_centerInParent="true"
+                android:background="@android:color/white" />
+
+            <RelativeLayout
+                android:id="@+id/rl_downloadapk_rocket_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/view_center_line"
+                android:clipChildren="false"
+                android:gravity="bottom">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_alignBottom="@+id/rl_downloadapk_rocket"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/top_bg" />
+                    <ImageView
+                        android:id="@+id/iv_download_apk_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:paddingTop="@dimen/dimen_10px"
+                        android:paddingRight="@dimen/dimen_10px"
+                        android:src="@drawable/icon_close" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/iv_download_apk_shadow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/rl_downloadapk_rocket"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/downlodi_shadow" />
+                <RelativeLayout
+                    android:id="@+id/rl_downloadapk_rocket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:id="@+id/iv_download_apk_flame"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dimen_214px"
+                        android:scaleType="fitXY"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_download_apk_rocket"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/plane" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/iv_download_apk_cloud"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/rl_downloadapk_rocket"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/downloadapk_cloud" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:layout_below="@+id/view_center_line">
+
+                <include layout="@layout/dialog_download_apk_progress" />
+
+                <include layout="@layout/dialog_download_apk_bottom" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

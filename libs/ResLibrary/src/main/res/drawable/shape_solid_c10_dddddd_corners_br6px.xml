@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 填充的颜色 -->
+    <solid android:color="@color/c10_dddddd" />
+    <!-- 设置按钮的下面的角为圆角 -->
+    <corners android:bottomRightRadius="@dimen/dimen_6px" />
+</shape>

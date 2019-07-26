@@ -1,1 +1,5 @@
-include ':app', ':reslib', ':common', ':ljlogin', ':ljpay',':j1finger'
+include ':app', ':reslib', ':common', ':ljlogin',
+        ':ljpay',':j1finger',
+        ':downloadlibrary',
+        ':libs:ResLibrary',
+        ':libs:PermissionLibrary'

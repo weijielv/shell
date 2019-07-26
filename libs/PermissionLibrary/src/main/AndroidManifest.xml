@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.j1.permission">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:screenOrientation="portrait" >
+        <activity
+            android:name=".accountevent.ContactDetailActivity"
+            android:launchMode="singleTask" />
+    </application>
+</manifest>

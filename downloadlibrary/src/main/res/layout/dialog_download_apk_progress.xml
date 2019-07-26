@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/download_apk_view_later"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/c12_f8f8f8"
+    android:visibility="gone">
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/download_apk_progress_title"
+        style="@style/text_f03_34_c07_212630"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimen_20px"
+        android:gravity="center_horizontal"
+        android:text="正在更新，请稍等..." />
+
+    <RelativeLayout
+        android:layout_width="@dimen/dimen_300px"
+        android:layout_below="@+id/download_apk_progress_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_40px"
+        android:layout_marginBottom="@dimen/dimen_50px"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/pb_download"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/dimen_300px"
+            android:layout_height="@dimen/dimen_70px"
+            android:layout_centerInParent="true"
+            android:progressDrawable="@drawable/layer_background_shape76_progress_shape77"/>
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tv_download_apk_progress_provalue"
+            style="@style/text_f06_24_c07_212630"
+            android:textColor="@color/color_113b29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="下载" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--如需增加新的颜色值，请在下面进行增加。！！！！！！！！！！！-->
+    <color name="list_pressed_color">#d9d9d9</color>
+    <color name="divider_color">#DDDDDD</color>
+    <color name="cursor_color">#3395FF</color>
+    <color name="color_dot">#ff3b2f</color>
+
+    <!-- zxing -->
+    <color name="color_white">#FFFFFFFF</color>
+    <color name="viewfinder_mask">#a0000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+
+    <!--  新规范  -->
+    <color name="c01_fa4532">#fa4532</color>
+    <color name="c02_ff7e00">#ff7e00</color>
+    <color name="c03_f771a1">#f771a1</color>
+    <color name="c04_d58be7">#d58be7</color>
+    <color name="c05_3ea3f1">#3ea3f1</color>
+    <color name="c06_fdfad5">#fdfad5</color>
+    <color name="c07_212630">#212630</color>
+    <color name="c08_5f6575">#5f6575</color>
+    <color name="c09_979ca8">#979ca8</color>
+    <color name="c10_dddddd">#dddddd</color>
+    <color name="c11_f0eff4">#f0eff4</color>
+    <color name="c12_f8f8f8">#F8F8F8</color>
+    <color name="c13_fde6ba">#fde6ba</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_weixin">#3cb034</color>
+    <color name="color_wechat">#303630</color>
+    <color name="color_qq_normal">#03b621</color>
+    <color name="color_qq_pressed">#03a000</color>
+    <!--  非规范  -->
+    <color name="color_00a957">#00a957</color>
+    <color name="color_e5e5e5">#e5e5e5</color> <!--按压效果-->
+    <color name="color_5c5c5c">#5c5c5c</color>  <!--按压效果-->
+    <color name="color_e57100">#e57100</color> <!--按压效果-->
+    <color name="color_e6505e">#e6505e</color> <!--Main Tab 按压效果-->
+    <color name="color_ed2e29">#ed2e29</color><!--c01_fa4532对应的按压效果-->
+    <color name="color_6679b3">#6679b3</color><!--包裹的标签背景色-->
+    <color name="color_3ce392">#3ce392</color><!--凑单-->
+    <color name="color_2fc5f6">#2fc5f6</color><!--凑单-->
+    <color name="color_276cb9">#276cb9</color> <!--分享有礼-->
+    <color name="color_f2f2f2">#f2f2f2</color> <!--按钮的背景色-->
+    <color name="color_3ea3f1">#3ea3f1</color>
+    <color name="color_113b29">#113b29</color>
+    <color name="color_fcebed">#fcebed</color><!--订单提交-->
+    <color name="color_3395FF">#3395FF</color>
+    <color name="color_5e646f">#5e646f</color><!--五个tab的文字颜色-->
+    <color name="color_d5f1fd">#d5f1fd</color> <!--签到-->
+    <color name="color_eeeeee">#eeeeee</color>
+    <color name="color_f3981d">#f3981d</color>
+    <color name="alpha_50_c11_f0eff4">#80f0eff4</color>
+    <color name="color_5f6574">#5F6574</color>
+
+    <!--！！！！！！！！！！如需增加新的颜色值，请在该地方增加。并注明相关页面！！！！！！！！！！！-->
+
+    <!--黑色30%透明度-->
+    <color name="alpha_30_black">#4D000000</color>
+    <!--黑色20%透明度-->
+    <color name="alpha_20_black">#33000000</color>
+    <!--黑色60%透明度-->
+    <color name="alpha_60_black">#66000000</color>
+    <color name="alpha_40_black">#a6000000</color>
+    <color name="alpha_50_black">#80000000</color>
+    <color name="alpha_95_black">#0c000000</color>
+    <color name="alpha_20_white">#33ffffff</color>
+    <color name="alpha_40_white">#a6ffffff</color>
+    <color name="alpha_90_white">#e6FFFFFF</color>
+    <!--黑色80%透明度-->
+    <color name="alpha_80_black">#CC000000</color>
+    <!--黑色70%透明度-->
+    <color name="alpha_70_black">#B3000000</color>
+    <!--dddddd 50%透明度-->
+    <color name="alpha_50_c10_dddddd">#7fdddddd</color>
+    <color name="alpha_10_f6f6f6">#e6f6f6f6</color>
+    <color name="alpha_10_ededed">#e5ededed</color>
+
+    <color name="black_overlay">#66000000</color>
+</resources>

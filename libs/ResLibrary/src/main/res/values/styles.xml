@@ -1,0 +1,319 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 自定义字体颜色  定义规则按照text_字号_字体颜色 -->
+
+    <style name="text_90_white">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/f_90</item>
+    </style>
+
+    <style name="text_90_c07_212630">
+        <item name="android:textColor">@color/c07_212630</item>
+        <item name="android:textSize">@dimen/f_90</item>
+    </style>
+
+    <style name="text_f_60_c07_212630">
+        <item name="android:textColor">@color/c07_212630</item>
+        <item name="android:textSize">@dimen/f_60</item>
+    </style>
+
+    <style name="text_f01_48_c08_5f6575">
+        <item name="android:textColor">@color/c08_5f6575</item>
+        <item name="android:textSize">@dimen/f01_48</item>
+    </style>
+
+    <style name="text_f01_48_c01_fa4532">
+        <item name="android:textColor">@color/c01_fa4532</item>
+        <item name="android:textSize">@dimen/f01_48</item>
+    </style>
+
+    <style name="text_f01_48_c07_212630">
+        <item name="android:textColor">@color/c07_212630</item>
+        <item name="android:textSize">@dimen/f01_48</item>
+    </style>
+
+    <style name="j1_edit_text">
+        <item name="android:textCursorDrawable">@drawable/cursor_blue</item>
+
+    </style>
+
+    <style name="text_f02_36_c07_212630">
+        <item name="android:textColor">@color/c07_212630</item>
+        <item name="android:textSize">@dimen/f02_36</item>
+    </style>
+
+    <style name="text_f02_36_c01_fa4532">
+        <item name="android:textColor">@color/c01_fa4532</item>
+        <item name="android:textSize">@dimen/f02_36</item>
+    </style>
+
+    <style name="text_f03_34_c01_fa4532">
+        <item name="android:textColor">@color/c01_fa4532</item>
+        <item name="android:textSize">@dimen/f03_34</item>
+    </style>
+
+    <style name="text_f02_36_c08_5f6575">
+        <item name="android:textColor">@color/c08_5f6575</item>
+        <item name="android:textSize">@dimen/f02_36</item>
+    </style>
+
+    <style name="text_f02_36_white">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/f02_36</item>
+    </style>
+
+
+    <style name="text_f03_34_white">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/f03_34</item>
+    </style>
+
+    <style name="text_f03_34_c07_212630">
+        <item name="android:textColor">@color/c07_212630</item>
+        <item name="android:textSize">@dimen/f03_34</item>
+    </style>
+
+    <style name="text_f03_34_c09_979ca8">
+        <item name="android:textColor">@color/c09_979ca8</item>
+        <item name="android:textSize">@dimen/f03_34</item>
+    </style>
+
+    <style name="text_f03_34_c08_5f6575">
+        <item name="android:textColor">@color/c08_5f6575</item>
+        <item name="android:textSize">@dimen/f03_34</item>
+    </style>
+
+    <style name="text_f03_34_0079ff">
+        <item name="android:textColor">#0079ff</item>
+        <item name="android:textSize">@dimen/f03_34</item>
+    </style>
+
+
+    <style name="text_f04_30_c10_dddddd">
+        <item name="android:textColor">@color/c10_dddddd</item>
+        <item name="android:textSize">@dimen/f04_30</item>
+    </style>
+
+    <style name="text_f04_30_c07_212630">
+        <item name="android:textColor">@color/c07_212630</item>
+        <item name="android:textSize">@dimen/f04_30</item>
+    </style>
+
+    <style name="text_f04_30_c7c7c7">
+        <item name="android:textColor">#c7c7c7</item>
+        <item name="android:textSize">@dimen/f04_30</item>
+    </style>
+
+    <style name="text_f04_30_d76e64">
+        <item name="android:textColor">#d76e64</item>
+        <item name="android:textSize">@dimen/f04_30</item>
+    </style>
+
+    <style name="text_f04_30_white">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/f04_30</item>
+    </style>
+
+    <style name="text_f04_30_bdbdbd">
+        <item name="android:textColor">#bdbdbd</item>
+        <item name="android:textSize">@dimen/f04_30</item>
+    </style>
+
+
+    <style name="text_f04_30_c09_979ca8">
+        <item name="android:textColor">@color/c09_979ca8</item>
+        <item name="android:textSize">@dimen/f04_30</item>
+    </style>
+
+    <style name="text_f04_30_c02_ff7e00">
+        <item name="android:textColor">@color/c02_ff7e00</item>
+        <item name="android:textSize">@dimen/f04_30</item>
+    </style>
+
+    <style name="text_f04_30_c08_5f6575">
+        <item name="android:textColor">@color/c08_5f6575</item>
+        <item name="android:textSize">@dimen/f04_30</item>
+    </style>
+
+    <style name="text_f04_30_c01_fa4532">
+        <item name="android:textColor">@color/c01_fa4532</item>
+        <item name="android:textSize">@dimen/f04_30</item>
+    </style>
+
+    <style name="text_f05_28_c01_fa4532">
+        <item name="android:textColor">@color/c01_fa4532</item>
+        <item name="android:textSize">@dimen/f05_28</item>
+    </style>
+
+    <style name="text_f05_28_c03_f771a1">
+        <item name="android:textColor">@color/c03_f771a1</item>
+        <item name="android:textSize">@dimen/f05_28</item>
+    </style>
+
+    <style name="text_f05_28_c05_3ea3f1">
+        <item name="android:textColor">@color/c05_3ea3f1</item>
+        <item name="android:textSize">@dimen/f05_28</item>
+    </style>
+
+    <style name="text_f05_28_c07_212630">
+        <item name="android:textColor">@color/c07_212630</item>
+        <item name="android:textSize">@dimen/f05_28</item>
+    </style>
+
+    <style name="text_f05_28_c10_dddddd">
+        <item name="android:textColor">@color/c10_dddddd</item>
+        <item name="android:textSize">@dimen/f05_28</item>
+    </style>
+
+    <style name="text_f05_28_c08_5f6575">
+        <item name="android:textColor">@color/c08_5f6575</item>
+        <item name="android:textSize">@dimen/f05_28</item>
+    </style>
+
+    <style name="text_f05_28_white">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/f05_28</item>
+    </style>
+
+    <style name="text_f05_28_c09_979ca8">
+        <item name="android:textColor">@color/c09_979ca8</item>
+        <item name="android:textSize">@dimen/f05_28</item>
+    </style>
+
+    <style name="text_f05_28_008b78">
+        <item name="android:textColor">#008b78</item>
+        <item name="android:textSize">@dimen/f05_28</item>
+    </style>
+
+
+    <style name="text_26_c07_212630">
+        <item name="android:textColor">@color/c07_212630</item>
+        <item name="android:textSize">@dimen/f05_28</item>
+    </style>
+
+    <style name="text_26_c09_979ca8">
+        <item name="android:textColor">@color/c09_979ca8</item>
+        <item name="android:textSize">@dimen/f05_28</item>
+    </style>
+
+    <style name="text_f06_24_c02_ff7e00">
+        <item name="android:textColor">@color/c02_ff7e00</item>
+        <item name="android:textSize">@dimen/f06_24</item>
+    </style>
+
+    <style name="text_f05_28_c02_ff7e00">
+        <item name="android:textColor">@color/c02_ff7e00</item>
+        <item name="android:textSize">@dimen/f05_28</item>
+    </style>
+
+    <style name="text_f05_28_color_666666">
+        <item name="android:textColor">@color/color_666666</item>
+        <item name="android:textSize">@dimen/f05_28</item>
+    </style>
+
+    <style name="text_f06_24_c07_212630">
+        <item name="android:textColor">@color/c07_212630</item>
+        <item name="android:textSize">@dimen/f06_24</item>
+    </style>
+
+    <style name="text_f06_24_white">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/f06_24</item>
+    </style>
+
+    <style name="text_f06_24_c09_979ca8">
+        <item name="android:textColor">@color/c09_979ca8</item>
+        <item name="android:textSize">@dimen/f06_24</item>
+    </style>
+
+    <style name="text_f06_24_c01_fa4532">
+        <item name="android:textColor">@color/c01_fa4532</item>
+        <item name="android:textSize">@dimen/f06_24</item>
+    </style>
+
+    <style name="text_f06_24_c10_dddddd">
+        <item name="android:textColor">@color/c10_dddddd</item>
+        <item name="android:textSize">@dimen/f06_24</item>
+    </style>
+
+    <style name="text_f06_24_c08_5f6575">
+        <item name="android:textColor">@color/c08_5f6575</item>
+        <item name="android:textSize">@dimen/f06_24</item>
+    </style>
+
+    <style name="text_f06_24_c03_f771a1">
+        <item name="android:textColor">@color/c03_f771a1</item>
+        <item name="android:textSize">@dimen/f06_24</item>
+    </style>
+
+    <style name="text_f06_24_color_f3981d">
+        <item name="android:textColor">@color/color_f3981d</item>
+        <item name="android:textSize">@dimen/f06_24</item>
+    </style>
+
+    <style name="text_f06_24_c05_3ea3f1">
+        <item name="android:textColor">@color/c05_3ea3f1</item>
+        <item name="android:textSize">@dimen/f06_24</item>
+    </style>
+
+    <style name="text_22_c08_5f6575">
+        <item name="android:textColor">@color/c08_5f6575</item>
+        <item name="android:textSize">@dimen/f06_24</item>
+    </style>
+
+    <style name="text_22_c09_979ca8">
+        <item name="android:textColor">@color/c09_979ca8</item>
+        <item name="android:textSize">@dimen/f06_24</item>
+    </style>
+
+    <style name="text_22_c07_212630">
+        <item name="android:textColor">@color/c07_212630</item>
+        <item name="android:textSize">@dimen/f06_24</item>
+    </style>
+
+    <style name="text_22_c01_fa4532">
+        <item name="android:textColor">@color/c01_fa4532</item>
+        <item name="android:textSize">@dimen/f06_24</item>
+    </style>
+
+    <style name="text_f07_20_c09_979ca8">
+        <item name="android:textColor">@color/c09_979ca8</item>
+        <item name="android:textSize">@dimen/f07_20</item>
+    </style>
+
+    <style name="text_f07_20_c01_fa4532">
+        <item name="android:textColor">@color/c01_fa4532</item>
+        <item name="android:textSize">@dimen/f07_20</item>
+    </style>
+
+    <style name="text_f07_20_c08_5f6575">
+        <item name="android:textColor">@color/c08_5f6575</item>
+        <item name="android:textSize">@dimen/f07_20</item>
+    </style>
+
+    <style name="text_f07_20_c07_212630">
+        <item name="android:textColor">@color/c07_212630</item>
+        <item name="android:textSize">@dimen/f07_20</item>
+    </style>
+
+    <style name="text_f07_20_white">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/f07_20</item>
+    </style>
+
+    <style name="text_18_99">
+        <item name="android:textColor">@color/c09_979ca8</item>
+        <item name="android:textSize">@dimen/f_18</item>
+    </style>
+
+    <style name="text_18_c07_212630">
+        <item name="android:textColor">@color/c07_212630</item>
+        <item name="android:textSize">@dimen/f_18</item>
+    </style>
+
+    <style name="text_18_c08_5f6575">
+        <item name="android:textColor">@color/c08_5f6575</item>
+        <item name="android:textSize">@dimen/f_18</item>
+    </style>
+
+</resources>

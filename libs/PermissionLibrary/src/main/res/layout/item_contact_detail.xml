@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+
+        android:id="@+id/iv_contacts_item_selected"
+        android:layout_width="@dimen/dimen_30px"
+        android:layout_height="@dimen/dimen_24px"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dimen_34px" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dimen_34px"
+        android:layout_toRightOf="@id/iv_contacts_item_selected"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dimen_26px"
+        android:paddingTop="@dimen/dimen_26px">
+
+        <TextView
+            android:id="@+id/tv_contacts_item_phone_type"
+            style="@style/text_f04_30_c01_fa4532"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_18px" />
+
+        <TextView
+            android:id="@+id/tv_contacts_item_number"
+            style="@style/text_f04_30_c07_212630"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</RelativeLayout>

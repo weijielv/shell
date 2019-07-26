@@ -25,6 +25,7 @@ android {
 
 dependencies {
     implementation project(":common")
+    implementation project(":downloadlibrary")
     if (isLib.toBoolean()) {
         implementation project(':ljlogin')
         implementation project(':ljpay')

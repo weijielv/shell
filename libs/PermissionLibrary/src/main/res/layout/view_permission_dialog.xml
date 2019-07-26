@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_top_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_solid_c12_f8f8f8_corners6px"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/text_f02_36_c07_212630"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_40px"
+        android:layout_marginRight="@dimen/dimen_40px"
+        android:layout_marginTop="@dimen/dimen_40px"
+        android:background="@color/c12_f8f8f8"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        style="@style/text_f05_28_c08_5f6575"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_40px"
+        android:layout_marginRight="@dimen/dimen_40px"
+        android:layout_marginTop="@dimen/dimen_40px"
+        android:gravity="center_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/ll_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/dimen_40px"
+        android:background="@color/c10_dddddd"
+        android:orientation="horizontal" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_88px"
+        android:layout_marginTop="@dimen/dimen_40px"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btn_negative"
+            style="@style/text_f04_30_c07_212630"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/mbtn_c12_f8f8f8_corners_bl6px"
+            android:gravity="center"
+            android:text="@android:string/cancel" />
+
+        <Button
+            android:id="@+id/btn_positive"
+            style="@style/text_f04_30_white"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/mbtn_c01_fa4532_corners_br6px"
+            android:gravity="center" />
+
+    </LinearLayout>
+</LinearLayout>
+
+

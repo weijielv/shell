@@ -90,6 +90,14 @@ public class FingerManager {
         return FingerPrintStatus.HAS_FINGER;
     }
 
+    /***
+     * 申请打开指纹登陆/支付。
+     * @param keyStoreAlise       别名
+     * @param data                需要保存的数据。如密码123
+     * @param title               弹框的title
+     * @param description         弹框的描述
+     * @param callback            回调。
+     */
     @RequiresApi(api = Build.VERSION_CODES.M)
     public void applyAuthenticate(String keyStoreAlise,
                                   String data,
@@ -99,7 +107,6 @@ public class FingerManager {
 
         J1KeyValue<String, String> kv = new J1KeyValue<>(keyStoreAlise,data);
         requestFinger(PURPOSE_ENCRYPT,kv,title,description,callback);
-
     }
 
     /**
@@ -117,10 +124,7 @@ public class FingerManager {
 
         J1KeyValue<String, String> kv = new J1KeyValue<>(keyStoreAlise,"");
         requestFinger(PURPOSE_DECRYPT,kv,title,description,callback);
-
     }
-
-
     /**
      * 请求指纹验证。
      *
@@ -136,7 +140,6 @@ public class FingerManager {
                               @Nullable String description,
                               FingerAuthenticationCallBack callback) {
         this.callback = callback;
-
         try {
             setPurpose(purpose);
             setSecretData(kv);

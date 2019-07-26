@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/c12_f8f8f8"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_20px"
+            android:src="@drawable/btn_head_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/text_f02_36_c07_212630"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:text="@string/contact_title" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider_color" />
+
+    <TextView
+        android:id="@+id/tv_contact_name"
+        style="@style/text_f03_34_c07_212630"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_62px"
+        android:layout_marginLeft="@dimen/dimen_94px"
+        android:layout_marginTop="@dimen/dimen_50px"
+        android:gravity="left|center_vertical" />
+
+    <TextView
+        android:id="@+id/tv_no_contact_show"
+        style="@style/text_f04_30_c01_fa4532"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_30px"
+        android:lineSpacingExtra="@dimen/dimen_8px"
+        android:text="@string/no_pick_phone"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/lv_contact_number"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent" />
+
+</LinearLayout>

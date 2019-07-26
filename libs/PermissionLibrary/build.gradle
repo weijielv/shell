@@ -1,0 +1,35 @@
+apply plugin: 'com.android.library'
+
+android {
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+    }
+
+
+    dependencies {
+        implementation rootProject.ext.dependencies.v4
+        implementation project(':libs:ResLibrary')
+    }
+
+    buildTypes {
+        release {
+            // debug模式开关   true：debug   false：
+            buildConfigField "boolean", "DEBUG_PERMISSION", "false"
+        }
+        debug {
+            // debug模式开关   true：debug   false
+            buildConfigField "boolean", "DEBUG_PERMISSION", "true"
+        }
+
+
+    }
+
+
+}

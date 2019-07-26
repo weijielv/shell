@@ -58,8 +58,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 FingerPrintStatus type = FingerManager.getFingerprintAvailable(MainActivity.this);
                 if (FingerPrintStatus.HAS_FINGER == type) {
-
-                    //showDialog();
                     if (fingerManager.isOpenFingerLogin(SPLoginkey) == PURPOSE_ENCRYPT) {
                         String pwd = etLogin.getText().toString();
                         if (TextUtils.isEmpty(pwd)){

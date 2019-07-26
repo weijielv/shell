@@ -7,7 +7,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.0'
+        classpath 'com.android.tools.build:gradle:3.4.2'
         
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -18,16 +18,13 @@ buildscript {
 //针对不同的app module之间的差异不统一，也不可控
 ext {
     compileSdkVersion = 28
-    buildToolsVersion = "27.0.3"
+    buildToolsVersion = "28.0.3"
     minSdkVersion = 14
     targetSdkVersion = 26
 
-    /*dependencies = [
-            glide: 'com.github.bumptech.glide:glide:3.7.0',
+    dependencies = [
             v4: 'com.android.support:support-v4:23.4.0',
-            recyclerview:'com.android.support:recyclerview-v7:23.4.0',
-            loopjandroidasynchttp: 'com.loopj.android:android-async-http:1.4.9'
-    ]*/
+    ]
 }
 
 

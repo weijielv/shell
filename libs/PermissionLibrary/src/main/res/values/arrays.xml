@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="permission">
+        <item>联系人权限</item>
+        <item>拨打电话权限</item>
+        <item>电话权限</item>
+        <item>相机权限</item>
+        <item>定位权限</item>
+        <item>录音权限</item>
+        <item>存储权限</item>
+        <item>读取消息权限</item>
+    </string-array>
+</resources>

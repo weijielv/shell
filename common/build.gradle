@@ -39,4 +39,6 @@ dependencies {
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
     testImplementation 'junit:junit:4.12'
     api project(':j1finger')
+    api 'com.qmuiteam:qmui:1.1.7'
+    api 'com.squareup.okhttp:okhttp:2.7.5'
 }

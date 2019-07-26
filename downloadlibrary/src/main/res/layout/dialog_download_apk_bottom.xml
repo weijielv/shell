@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/download_apk_view_pre"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/shape_solid_c12_f8f8f8_corners_bl6px_br6px"
+    android:visibility="visible">
+
+    <TextView
+        android:id="@+id/tv_downloadapk_new_version"
+        style="@style/text_f03_34_c07_212630"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimen_20px"
+        android:gravity="center_horizontal"
+        android:text="发现新版本" />
+
+    <TextView
+        android:id="@+id/tv_downloadapk_new_size"
+        style="@style/text_f05_28_c09_979ca8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/dimen_50px"
+        android:layout_marginRight="@dimen/dimen_50px"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        android:text="大小"
+        />
+    <TextView
+        android:id="@+id/tv_downloadapk_new_dec"
+        style="@style/text_f05_28_c09_979ca8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dimen_42px"
+        android:layout_marginLeft="@dimen/dimen_50px"
+        android:layout_marginRight="@dimen/dimen_50px"
+        android:gravity="center_horizontal"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_88px"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_downloadapk_update_now"
+            style="@style/text_f04_30_c01_fa4532"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_88px"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/shape_solid_transparent_corners_right_6px_13"
+            android:text="立即下载" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/shape_solid_color_ed2e29_corners_br6px" android:state_pressed="true" />
+    <item android:drawable="@drawable/shape_solid_c10_dddddd_corners_br6px" android:state_enabled="false" /><!--不可点击-->
+    <item android:drawable="@drawable/shape_solid_c01_fa4532_corners_br6px" /><!--default-->
+</selector>
