@@ -17,6 +17,7 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.j1.j1finger.FingerAuthenticationCallBack;
 import com.j1.j1finger.FingerManager;
 import com.j1.j1finger.FingerPrintStatus;
+import com.lvweijie.common.acvititys.CommonActivity;
 import com.lvweijie.ljlogin.LoginActivity;
 
 import static android.security.keystore.KeyProperties.PURPOSE_DECRYPT;
@@ -34,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        Intent intent = new Intent(this, CommonActivity.class);
+        startActivity(intent);
+
         setContentView(R.layout.activity_main);
         findViewById(R.id.shell_btn_login).setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,4 +1,4 @@
-include ':app', ':reslib', ':common', ':ljlogin',
+include ':app', ':reslib', ':common', ':ljlogin', ':dex',
         ':ljpay',':j1finger',
         ':downloadlibrary',
         ':libs:ResLibrary',

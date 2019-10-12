@@ -3,7 +3,9 @@
     package="com.lvweijie.common">
 
     <application>
-        <activity android:name=".CommonActivity">
+        <activity android:name=".acvititys.CommonActivity">
+        </activity>
+        <activity android:name=".acvititys.ProxyAcitivity">
         </activity>
     </application>
 

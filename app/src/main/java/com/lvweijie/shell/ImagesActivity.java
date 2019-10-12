@@ -44,6 +44,7 @@ import com.qmuiteam.qmui.widget.QMUIPagerAdapter;
 import com.qmuiteam.qmui.widget.QMUIViewPager;
 import com.squareup.okhttp.Call;
 import com.squareup.okhttp.Callback;
+import com.squareup.okhttp.ConnectionPool;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
@@ -138,7 +139,6 @@ public class ImagesActivity extends AppCompatActivity {
         call1.enqueue(new Callback() {
             @Override
             public void onFailure(Request request, IOException e) {
-
             }
 
             @Override
